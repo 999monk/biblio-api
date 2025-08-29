@@ -1,0 +1,49 @@
+@BIblioApi_HostAddress = http://localhost:5160
+@token =
+
+###
+# @name login
+# Realiza el login y guarda el token JWT en una variable 'token'.
+# La sintaxis '> {% ... %}' es usada por los clientes REST de JetBrains y VS Code.
+POST {{BIblioApi_HostAddress}}/api/login
+Content-Type: application/json
+
+{
+  "email": "mailPrueba@gmail.com",
+  "password": "asd.123"
+}
+
+> {% 
+    client.global.set("token", response.body);
+%}
+
+###
+# Obtener todos los socios.
+# Este request usa el token obtenido en el login para la autorización.
+GET {{BIblioApi_HostAddress}}/api/socios
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+# Obtener un socio por su ID.
+GET {{BIblioApi_HostAddress}}/api/socios/1
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+# Crear un nuevo socio.
+POST {{BIblioApi_HostAddress}}/api/socios
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "code": "S010",
+  "name": "Socio desde .http",
+  "email": "socio.http@example.com"
+}
+
+###
+# Obtener todos los libros.
+GET {{BIblioApi_HostAddress}}/api/libros
+Accept: application/json
+Authorization: Bearer {{token}}

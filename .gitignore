@@ -1,0 +1,77 @@
+
+# https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln.DotSettings.user
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+## Build results
+[Bb]in/
+[Oo]bj/
+
+## VS Code
+.vscode/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+
+# Rider directories
+.idea/
+
+# Mac files
+.DS_Store
+
+# Local secrets
+secrets.json
+appsettings.Development.json
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.[Tt]log
+*.trx
+
+# Build artifacts
+*.nupkg
+*.dll
+*.exe
+*.pdb
+*.exe.config
+
+# NuGet Packages
+*.nupkg
+*.nuget.props
+*.nuget.targets
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Dotnet Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# StyleCop
+StyleCop.Cache
+
+# Profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Other
+*.pidb
+*.svclog
