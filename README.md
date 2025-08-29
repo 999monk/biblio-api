@@ -51,17 +51,17 @@ API RESTful diseñada para la gestión de una biblioteca. Permite administrar li
 ### Balance final
 
 #### Lo que creo que está relativamente bien:
-→ Estructura y separación de responsabilidades: arquitectura en capas clásica.
+- → Estructura y separación de responsabilidades: arquitectura en capas clásica.
       * Controllers: se dedican exclusivamente a manejar las peticiones y respuestas HTTP.
       * Services: contienen toda la lógica de negocio (las "reglas").
       * Data (DataContext): gestiona la persistencia de datos. 
-→ Uso correcto de inyección de dependencias.
-→ Manejo asíncrono con Hangfire.
-→ Uso de DTOs para modelar los datos que entran y salen.
-→ Test unitarios simples.
+- → Uso correcto de inyección de dependencias.
+- → Manejo asíncrono con Hangfire.
+- → Uso de DTOs para modelar los datos que entran y salen.
+- → Test unitarios simples.
 
 #### Posibles mejoras a futuro:
-→ Validación de datos de entrada.
-→ Manejo de errores más específico.
-→ Mapear las entidades y DTOs con Automapper.
-→ Agregar test que aborden más caminos y funcionalidades.
+- → Validación de datos de entrada.
+- → Manejo de errores más específico.
+- → Mapear las entidades y DTOs con Automapper.
+- → Agregar test que aborden más caminos y funcionalidades.
